@@ -1,0 +1,15 @@
+package com.training.RestController;
+
+import java.util.List;
+
+import com.training.bean.Flat;
+
+public interface FlatRestController {
+
+	Flat addFlat(Flat flat) ;
+	Flat updateFlat(Flat flat) ;
+	String deleteFlat(int flatId) ;
+	Flat getFlat(int id) ;
+	List<Flat> getAllFlat();
+	List<Flat> getAllFlatByCost(float cost);
+}

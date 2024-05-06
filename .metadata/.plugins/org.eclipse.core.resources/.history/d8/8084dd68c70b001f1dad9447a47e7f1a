@@ -1,0 +1,128 @@
+package com.training.service;
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
+
+import com.training.Service.FlatServiceImpl;
+import com.training.bean.Flat;
+import com.training.bean.FlatAddress;
+import com.training.dao.FlatDAO;
+
+public class FlatServiceImplTest {
+
+    @Mock
+    private FlatDAO flatDAOMock;
+
+    @InjectMocks
+    private FlatServiceImpl flatService;
+
+    
+
+    @Test
+    public void testAddFlat() {
+        Flat inputFlat = new Flat(); // Create a sample flat object
+        when(flatDAOMock.save(inputFlat)).thenReturn(inputFlat);
+
+        Flat result = flatService.addFlat(inputFlat);
+
+        assertNotNull(result);
+        assertEquals(inputFlat, result);
+        verify(flatDAOMock, times(1)).save(inputFlat);
+    }
+
+    @Test
+    public void testUpdateFlat() {
+        Flat inputFlat = new Flat(); // Create a sample flat object
+        when(flatDAOMock.save(inputFlat)).thenReturn(inputFlat);
+
+        Flat result = flatService.updateFlat(inputFlat);
+
+        assertNotNull(result);
+        assertEquals(inputFlat, result);
+        verify(flatDAOMock, times(1)).save(inputFlat);
+    }
+
+    @Test
+    public void testDeleteFlat() {
+        Flat inputFlat = new Flat(); // Create a sample flat object
+        String expectedResult = "Flat Booking Deleted Successfully";
+
+        String result = flatService.deleteFlat(inputFlat);
+
+        assertEquals(expectedResult, result);
+        verify(flatDAOMock, times(1)).delete(inputFlat);
+    }
+
+    @Test
+    public void testGetFlatById_ExistingId() {
+        int flatId = 123; // Sample flat ID
+        Flat expectedFlat = new Flat(); // Create a sample flat object
+        when(flatDAOMock.findById(flatId)).thenReturn(Optional.of(expectedFlat));
+
+        Flat result = flatService.getFlatById(flatId);
+
+        assertNotNull(result);
+        assertEquals(expectedFlat, result);
+        verify(flatDAOMock, times(1)).findById(flatId);
+    }
+
+    @Test
+    public void testGetFlatById_NonExistingId() {
+        int flatId = 456; // Sample flat ID
+        when(flatDAOMock.findById(flatId)).thenReturn(Optional.empty());
+
+        Flat result = flatService.getFlatById(flatId);
+
+        assertNull(result);
+        verify(flatDAOMock, times(1)).findById(flatId);
+    }
+
+    @Test
+    public void testGetAllFlats() {
+        List<Flat> expectedList = new ArrayList<>(); // Create a sample list of flats
+        when(flatDAOMock.findAll()).thenReturn(expectedList);
+
+        List<Flat> result = flatService.getAllFlats();
+
+        assertNotNull(result);
+        assertEquals(expectedList, result);
+        verify(flatDAOMock, times(1)).findAll();
+    }
+
+    @Test
+    public void testGetAllFlatsByCost() {
+        float cost = 1000.0f; // Sample cost
+        FlatAddress flataddress=new FlatAddress();
+        List<Flat> allFlats = new ArrayList<>(); // Create a sample list of flats
+        Flat flat1 = new Flat(1,10000f,flataddress,"available");
+        Flat flat2 = new Flat(2,20000f,flataddress,"booked");
+        allFlats.add(flat1);
+        allFlats.add(flat2);
+
+        when(flatDAOMock.findAll()).thenReturn(allFlats);
+
+        List<Flat> result = flatService.getAllFlatsByCost(cost);
+
+        assertNotNull(result);
+        assertEquals(1, result.size());
+        assertEquals(flat1, result.get(0));
+        verify(flatDAOMock, times(1)).findAll();
+    }
+}
+

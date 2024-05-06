@@ -1,0 +1,19 @@
+package com.training.Service;
+
+import java.util.List;
+
+import com.training.bean.Tenant;
+
+public interface TenantService {
+Tenant addTenant(Tenant tenant);
+    
+    Tenant updateTenant(Tenant tenant);
+    
+    Tenant deleteTenant(Tenant tenant);
+    
+    Tenant getTenant(int id);
+    
+    List<Tenant> getAllTenants();
+    
+    Tenant validateTenant(int tenantid);
+}

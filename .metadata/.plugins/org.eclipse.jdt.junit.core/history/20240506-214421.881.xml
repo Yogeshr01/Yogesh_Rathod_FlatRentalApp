@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FlatBookingServiceImplTest" project="03-LandlordClient" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="com.training.service.FlatBookingServiceImplTest" time="0.314" displayname="FlatBookingServiceImplTest" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatBookingServiceImplTest]">
+    <testcase name="testDeleteFlatBooking" classname="com.training.service.FlatBookingServiceImplTest" time="0.179" displayname="testDeleteFlatBooking()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatBookingServiceImplTest]/[method:testDeleteFlatBooking()]"/>
+    <testcase name="testGetFlatBookingById_ExistingId" classname="com.training.service.FlatBookingServiceImplTest" time="0.041" displayname="testGetFlatBookingById_ExistingId()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatBookingServiceImplTest]/[method:testGetFlatBookingById_ExistingId()]"/>
+    <testcase name="testAddFlatBooking" classname="com.training.service.FlatBookingServiceImplTest" time="0.019" displayname="testAddFlatBooking()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatBookingServiceImplTest]/[method:testAddFlatBooking()]"/>
+    <testcase name="testGetFlatBookingById_NonExistingId" classname="com.training.service.FlatBookingServiceImplTest" time="0.016" displayname="testGetFlatBookingById_NonExistingId()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatBookingServiceImplTest]/[method:testGetFlatBookingById_NonExistingId()]"/>
+    <testcase name="testUpdateFlatBooking" classname="com.training.service.FlatBookingServiceImplTest" time="0.011" displayname="testUpdateFlatBooking()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatBookingServiceImplTest]/[method:testUpdateFlatBooking()]"/>
+    <testcase name="testGetAllFlatBooking" classname="com.training.service.FlatBookingServiceImplTest" time="0.008" displayname="testGetAllFlatBooking()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatBookingServiceImplTest]/[method:testGetAllFlatBooking()]"/>
+  </testsuite>
+</testrun>

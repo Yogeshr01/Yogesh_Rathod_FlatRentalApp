@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="F:\Capstone Project\05-FlatRentalInvoker"/>
+			<item value="C:\Maven Projects\05-FlatRentalInvoker"/>
+			<item value="C:\Maven Projects\18-EurekaInvoker"/>
+			<item value="C:\Maven Projects\17-EurekaClient"/>
+			<item value="C:\Maven Projects\16-EurekaClient"/>
+			<item value="C:\Maven Projects\15-EurekaServer"/>
+			<item value="C:\Maven Projects\rental-service-api-jpa-master"/>
+			<item value="C:\Maven Projects\Rental_Application-main"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

@@ -1,0 +1,44 @@
+package com.training.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserServiceImpl implements UserService {
+	@Autowired
+    private UserDAO userDAO;
+
+    @Override
+    public User addUser(User user) {
+        return userDAO.save(user);
+    }
+
+    @Override
+    public User updateUser(User user) {
+        return userDAO.save(user);
+    }
+
+    @Override
+    public void deleteUser(User user) {
+        userDAO.delete(user);
+    }
+
+    @Override
+    public User getUser(int userId) {
+        Optional<User> userOptional = userDAO.findById(userId);
+        return userOptional.orElse(null);
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return userDAO.findAll();
+    }
+
+    @Override
+    public User validateUser(String username, String password) {
+        // Implement validation logic here
+        // For example, check if the username and password match
+        return userDAO.findByUsernameAndPassword(username, password);
+    }
+}
+}

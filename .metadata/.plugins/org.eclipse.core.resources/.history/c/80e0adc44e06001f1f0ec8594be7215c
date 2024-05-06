@@ -1,0 +1,44 @@
+package com.training.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.training.bean.Landlord;
+import com.training.dao.LandlordDAO;
+
+public class LandlordServiceImpl {
+	@Autowired
+    private LandlordDAO landlordDAO;
+
+    public LandlordDAO getLandlordDAO() {
+		return landlordDAO;
+	}
+
+	public void setLandlordDAO(LandlordDAO landlordDAO) {
+		this.landlordDAO = landlordDAO;
+	}
+
+	public Landlord addLandlord(Landlord landlord) {
+        return landlordDAO.save(landlord);
+    }
+
+    public Landlord updateLandlord(Landlord landlord) {
+        return landlordDAO.save(landlord);
+    }
+
+    public void deleteLandlord(Landlord landlord) {
+        landlordDAO.delete(landlord);
+    }
+
+    public Landlord getLandlordById(int landlordId) {
+        Optional<Landlord> landlordOptional = landlordDAO.findById(landlordId);
+        return landlordOptional.orElse(null);
+    }
+
+    public List<Landlord> getAllLandlords() {
+        return landlordDAO.findAll();
+    }
+}
+}

@@ -1,0 +1,14 @@
+package com.training.RestController;
+
+import java.util.List;
+
+import com.training.bean.Tenant;
+
+public interface TenantRestController {
+	Tenant addTenant(Tenant tenant) ;
+	Tenant updateTenant(Tenant tenant) ;
+	String deleteTenant(int tenantId) ;
+	Tenant getTenant(int id) ;
+	List<Tenant> getAllTenant();
+	//Tenant validateTenent(int tenantId);
+}

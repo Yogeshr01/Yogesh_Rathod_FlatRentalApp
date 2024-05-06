@@ -1,0 +1,54 @@
+package com.training.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.training.bean.Tenant;
+import com.training.dao.TenantDAO;
+@Service
+public class TenantServiceImpl implements TenantService {
+	@Autowired
+    private TenantDAO tenantDAO;
+
+    public TenantDAO getTenantDAO() {
+		return tenantDAO;
+	}
+
+	public void setTenantDAO(TenantDAO tenantDAO) {
+		this.tenantDAO = tenantDAO;
+	}
+
+	@Override
+    public Tenant addTenant(Tenant tenant) {
+        return tenantDAO.save(tenant);
+    }
+
+    @Override
+    public Tenant updateTenant(Tenant tenant) {
+        return tenantDAO.save(tenant);
+    }
+
+    @Override
+    public void deleteTenant(Tenant tenant) {
+        tenantDAO.delete(tenant);
+    }
+
+    @Override
+    public Tenant getTenant(int tenantId) {
+        Optional<Tenant> tenantOptional = tenantDAO.findById(tenantId);
+        return tenantOptional.orElse(null);
+    }
+
+    @Override
+    public List<Tenant> getAllTenants() {
+        return tenantDAO.findAll();
+    }
+
+    @Override
+    public Tenant validateTenant(int tenantId) {
+        // Implement validation logic here
+        // For example, check if the tenant exists
+        return getTenant(tenantId);
+    }
+}
+}

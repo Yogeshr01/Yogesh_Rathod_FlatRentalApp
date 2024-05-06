@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FlatServiceImplTest" project="03-LandlordClient" tests="7" started="7" failures="0" errors="7" ignored="0">
+  <testsuite name="com.training.service.FlatServiceImplTest" time="0.022" displayname="FlatServiceImplTest" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatServiceImplTest]">
+    <testcase name="testGetFlatById_NonExistingId" classname="com.training.service.FlatServiceImplTest" time="0.021" displayname="testGetFlatById_NonExistingId()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatServiceImplTest]/[method:testGetFlatById_NonExistingId()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.training.dao.FlatDAO.findById(Object)" because "this.flatDAOMock" is null&#13;
+	at com.training.service.FlatServiceImplTest.testGetFlatById_NonExistingId(FlatServiceImplTest.java:88)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testAddFlat" classname="com.training.service.FlatServiceImplTest" time="0.0" displayname="testAddFlat()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatServiceImplTest]/[method:testAddFlat()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.training.dao.FlatDAO.save(Object)" because "this.flatDAOMock" is null&#13;
+	at com.training.service.FlatServiceImplTest.testAddFlat(FlatServiceImplTest.java:40)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testGetFlatById_ExistingId" classname="com.training.service.FlatServiceImplTest" time="0.0" displayname="testGetFlatById_ExistingId()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatServiceImplTest]/[method:testGetFlatById_ExistingId()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.training.dao.FlatDAO.findById(Object)" because "this.flatDAOMock" is null&#13;
+	at com.training.service.FlatServiceImplTest.testGetFlatById_ExistingId(FlatServiceImplTest.java:76)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testGetAllFlats" classname="com.training.service.FlatServiceImplTest" time="0.0" displayname="testGetAllFlats()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatServiceImplTest]/[method:testGetAllFlats()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.training.dao.FlatDAO.findAll()" because "this.flatDAOMock" is null&#13;
+	at com.training.service.FlatServiceImplTest.testGetAllFlats(FlatServiceImplTest.java:99)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testUpdateFlat" classname="com.training.service.FlatServiceImplTest" time="0.0" displayname="testUpdateFlat()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatServiceImplTest]/[method:testUpdateFlat()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.training.dao.FlatDAO.save(Object)" because "this.flatDAOMock" is null&#13;
+	at com.training.service.FlatServiceImplTest.testUpdateFlat(FlatServiceImplTest.java:52)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testGetAllFlatsByCost" classname="com.training.service.FlatServiceImplTest" time="0.0" displayname="testGetAllFlatsByCost()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatServiceImplTest]/[method:testGetAllFlatsByCost()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.training.dao.FlatDAO.findAll()" because "this.flatDAOMock" is null&#13;
+	at com.training.service.FlatServiceImplTest.testGetAllFlatsByCost(FlatServiceImplTest.java:118)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testDeleteFlat" classname="com.training.service.FlatServiceImplTest" time="0.001" displayname="testDeleteFlat()" uniqueid="[engine:junit-jupiter]/[class:com.training.service.FlatServiceImplTest]/[method:testDeleteFlat()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.training.Service.FlatServiceImpl.deleteFlat(com.training.bean.Flat)" because "this.flatService" is null&#13;
+	at com.training.service.FlatServiceImplTest.testDeleteFlat(FlatServiceImplTest.java:66)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>
